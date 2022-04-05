@@ -36,6 +36,12 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'codigo'=>'required',
+            'ci'=>'required|integer',
+            'nombre'=>'required|max:25',
+            'edad'=>'required|integer|max:100',            
+        ]);
         $cliente=new Cliente();
         $cliente->codigo=$request->get('codigo');
         $cliente->ci=$request->get('ci');
@@ -78,6 +84,13 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
+        request()->validate([
+            'codigo'=>'required',
+            'ci'=>'required|integer',
+            'nombre'=>'required|max:25',
+            'edad'=>'required|integer|max:100',            
+        ]);
+
         $cliente= Cliente::find($id);
         $cliente->codigo=$request->get('codigo');
         $cliente->ci=$request->get('ci');

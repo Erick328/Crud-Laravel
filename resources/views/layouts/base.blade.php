@@ -11,9 +11,9 @@
     <title>cliente</title>
   </head>
   <body>
-    <h1 class="bg-primary text-white text-center">Cliente</h1>
+    <h1 class="text-black text-center">Cliente</h1>
     <div class="container">
-        @yield('conten');
+        @yield('conten')
     </div>
     
 

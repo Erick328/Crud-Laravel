@@ -1,8 +1,8 @@
 @extends('layouts.base');
-@section('conten');
+@section('conten')
 
-<a href="clientes/create" class="btn btn-primary"> Crear Cliente</a>
-<table class="table table-dark table-striped mt-4">
+<a href="clientes/create" class="btn btn-danger">Crear Cliente</a>
+<table class="table">
     <thead>
         <tr>
             <th scope="col">ID</th>
